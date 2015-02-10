@@ -8,10 +8,10 @@ var bodyParser = require('body-parser');
 
 
 var app = express();
-
 process.env.PWD = process.cwd()
+
 // view engine setup
-app.set('views', path.join(process.env.PWD, 'app_server/views'));
+app.set('views', path.join(__dirname, 'app_server/views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 // may need app.use(express.session());  at some point
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(process.env.PWD, 'public')));
 
 require('./routes')(app); 
 
