@@ -9,9 +9,9 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-
+process.env.PWD = process.cwd()
 // view engine setup
-app.set('views', path.join(__dirname, 'app_server/views'));
+app.set('views', path.join(process.env.PWD, 'app_server/views'));
 app.set('view engine', 'jade');
 
 // uncomment after placing your favicon in /public
