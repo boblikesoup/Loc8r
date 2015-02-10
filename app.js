@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 // may need app.use(express.session());  at some point
-app.use(express.static(path.join(process.env.PWD, 'public')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 require('./routes')(app); 
 
