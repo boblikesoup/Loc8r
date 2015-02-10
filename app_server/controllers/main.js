@@ -1,9 +1,14 @@
 var express = require('express');
 var router = module.exports = express.Router();
 
-/* New Way GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Loc8r' });
+// About
+router.get('/about', function(req, res, next) {
+  res.render('index', { title: 'About' });
+});
+
+// Sign In
+router.get('/signin', function(req, res, next) {
+  res.render('index', { title: 'Sign In' });
 });
 
 // /* Book Way GET home page */
