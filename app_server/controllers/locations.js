@@ -13,5 +13,5 @@ router.get('/location-info', function(req, res, next) {
 
 //Add Review
 router.get('/location/review/new', function(req, res, next) {
-  res.render('index', { title: 'Add Review' });
+  res.render('location-review-form', { title: 'Add Review' });
 });

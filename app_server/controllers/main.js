@@ -3,12 +3,12 @@ var router = module.exports = express.Router();
 
 // About
 router.get('/about', function(req, res, next) {
-  res.render('index', { title: 'About' });
+  res.render('generic-text', { title: 'About' });
 });
 
 // Sign In
 router.get('/signin', function(req, res, next) {
-  res.render('index', { title: 'Sign In' });
+  res.render('signin-index', { title: 'Sign In' });
 });
 
 // /* Book Way GET home page */
